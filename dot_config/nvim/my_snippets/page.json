@@ -1,0 +1,13 @@
+{
+  "ket vector": {
+    "prefix": "ket",
+    "body": "\\ket{$1} $2",
+    "description": "ket vector"
+  },
+
+  "math mode": {
+    "prefix": "mk",
+    "body": "\\( $1 \\) $2",
+    "description": "inline math mode"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "ket vector": {
+    "prefix": "ket",
+    "body": "\\ket{$1}$0",
+    "description": "ket vector"
+  },
+
+  "math mode": {
+    "prefix": "mk",
+    "body": "\\( $1 \\)$0",
+    "description": "inline math mode"
+  },
+
+  "block matrix": {
+    "prefix": "bmat",
+    "body": "\\begin{bmatrix} $1 \\end{bmatrix}$0",
+    "description": "block matrix"
+  },
+
+  "braket": {
+    "prefix": "brk",
+    "body": "\\braket{ $1 | $2 }$0",
+    "description": "dirac braket"
+  },
+
+  "Complex C": {
+    "prefix": "CC",
+    "body": "\\mathbb{C}",
+    "description": "Complex C"
+  },
+
+  "Import Package": {
+    "prefix": "pk",
+    "body": "\\usepackage{$1}$0",
+    "description": "import packages"
+  },
+
+  "subscript": {
+    "prefix": "(\\w)__",
+    "body": ["\\_{${1:subscript}}"],
+    "description": "Subscript"
+  },
+
+  "bra vector": {
+    "prefix": "bra",
+    "body": "\\bra{$1}$0",
+    "description": "bra vector"
+  },
+
+  "outer product": {
+    "prefix": "out",
+    "body": "\\ket{$1} \\bra{$2}$0",
+    "description": "outer product"
+  }
+}
