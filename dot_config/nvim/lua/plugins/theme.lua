@@ -1,13 +1,10 @@
--- return {
---   "rebelot/kanagawa.nvim",
---   config = function()
---     vim.cmd("colorscheme kanagawa")
---   end,
--- }
-
 return {
-  "rose-pine/neovim",
-  config = function()
-    vim.cmd("colorscheme rose-pine-dawn")
-  end,
+    "rose-pine/neovim",
+
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "rose-pine-moon",
+        },
+    },
 }

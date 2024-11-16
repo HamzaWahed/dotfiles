@@ -26,3 +26,5 @@ vim.cmd([[
 imap <silent><expr> <C-f> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-f>'
 smap <silent><expr> <C-f> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-f>'
   ]])
+
+vim.keymap.set("n", "<leader>fz", "<cmd>Telescope zoxide<cr>")
