@@ -5,6 +5,8 @@
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
+source "$CONFIG_DIR/colors.sh" # Loads all defined colors
+
 ##### Bar Appearance #####
 # Configuring the general appearance of the bar.
 # These are only some of the options available. For all options see:
@@ -12,12 +14,30 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=top height=40 blur_radius=30 color=0x40000000
+# sketchybar --bar position=top height=40 blur_radius=30
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
 # For a full list of all available item properties see:
 # https://felixkratz.github.io/SketchyBar/config/items
+
+bar=(
+  height=38
+  blur_radius=30
+  color=$BAR_COLOR
+  border_width=2
+  border_color=$BAR_BORDER_COLOR
+  shadow=off
+  position=top
+  sticky=on
+  padding_right=10
+  padding_left=10
+  y_offset=-5
+  margin=-2
+  topmost=window
+)
+
+sketchybar --bar "${bar[@]}"
 
 default=(
   padding_left=5
@@ -32,6 +52,7 @@ default=(
   label.padding_right=4
 )
 sketchybar --default "${default[@]}"
+
 
 ##### Adding Mission Control Space Indicators #####
 # Let's add some mission control spaces:
@@ -69,7 +90,7 @@ sketchybar --default "${default[@]}"
 
 sketchybar --add event aerospace_workspace_change
 
-icons=(      󰍥  󰚗  󱂶  󰂺 󱉟)
+icons=(      󰍥  󰚗  󱂶  󰂺  󱉟)
 idx=0
 
 for sid in $(aerospace list-workspaces --all); do
