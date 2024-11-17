@@ -22,3 +22,18 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
 end, { silent = true })
 
 vim.keymap.set("n", "<leader>fz", "<cmd>Telescope zoxide<cr>")
+
+local Terminal = require("toggleterm.terminal").Terminal
+local lazygit_instance =
+    Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
+
+function lazygit()
+    lazygit_instance:toggle()
+end
+
+vim.api.nvim_set_keymap(
+    "n",
+    "<leader>gg",
+    "<cmd>lua lazygit()<CR>",
+    { noremap = true, silent = true }
+)
