@@ -1,17 +1,26 @@
 return {
-  {
-    "L3MON4D3/LuaSnip",
-    config = function()
-      -- Load snippets from specified path
-      require("luasnip.loaders.from_lua").lazy_load({ paths = { "~/.config/nvim/LuaSnip/" } })
+    {
+        "L3MON4D3/LuaSnip",
+        lazy = true,
+        dependencies = {
+            {
+                "rafamadriz/friendly-snippets",
+                config = function()
+                    require("luasnip.loaders.from_vscode").lazy_load()
+                end,
+            },
+        },
 
-      require("luasnip").config.set_config({
-        enable_autosnippets = true,
-        update_events = "TextChanged,TextChangedI",
+        config = function()
+            -- Load snippets from specified path
+            require("luasnip.loaders.from_lua").lazy_load({
+                paths = { "~/.config/nvim/LuaSnip/" },
+            })
 
-        -- Use Tab to trigger visual selection
-        store_selection_keys = "<Tab>",
-      })
-    end,
-  },
+            require("luasnip").config.set_config({
+                enable_autosnippets = true,
+                update_events = "TextChanged,TextChangedI",
+            })
+        end,
+    },
 }
