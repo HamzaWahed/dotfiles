@@ -37,3 +37,19 @@ vim.api.nvim_set_keymap(
     "<cmd>lua lazygit()<CR>",
     { noremap = true, silent = true }
 )
+
+vim.api.nvim_set_hl(0, "LeapBackdrop", { fg = "None" })
+
+vim.api.nvim_set_hl(0, "LeapMatch", {
+    fg = "white",
+    bg = "red",
+    bold = true,
+    nocombine = true,
+})
+
+vim.api.nvim_set_hl(0, "LeapLabel", {
+    fg = "yellow",
+    bg = "None",
+    bold = true,
+    nocombine = true,
+})

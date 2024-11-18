@@ -1,6 +1,3 @@
--- ~/github/dotfiles-latest/neovim/neobean/lua/config/colors.lua
-
--- ~/github/dotfiles-latest/neovim/neobean/lua/config/colors.lua
 local M = {}
 
 -- Add cache at module level

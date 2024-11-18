@@ -1,8 +1,3 @@
--- https://github.com/eldritch-theme/eldritch.nvim
---
--- Filename: ~/github/dotfiles-latest/neovim/neobean/lua/plugins/colorschemes/eldritch.lua
--- ~/github/dotfiles-latest/neovim/neobean/lua/plugins/colorschemes/eldritch.lua
-
 local colors = require("config.colors").load_colors()
 
 return {
@@ -10,12 +5,11 @@ return {
     lazy = true,
     name = "eldritch",
     opts = {
-        transparent = true,
+        -- transparent = true,
         -- Overriding colors globally using a definitions table
         on_colors = function(global_colors)
             -- Define all color overrides in a single table
             local color_definitions = {
-                -- https://github.com/eldritch-theme/eldritch.nvim/blob/master/lua/eldritch/colors.lua
                 bg = colors["linkarzu_color10"],
                 fg = colors["linkarzu_color14"],
                 selection = colors["linkarzu_color16"],
@@ -217,6 +211,8 @@ return {
                 DiagnosticOk = { fg = colors["linkarzu_color04"] },
                 DiagnosticError = { fg = colors["linkarzu_color05"] },
                 RenderMarkdownQuote = { fg = colors["linkarzu_color12"] },
+                QuickFixLine = { fg = colors["linkarzu_color08"] },
+                LspInlayHint = { fg = colors["linkarzu_color02"] },
 
                 -- visual mode selection
                 Visual = {
