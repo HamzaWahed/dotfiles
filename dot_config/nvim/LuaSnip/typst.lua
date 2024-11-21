@@ -84,6 +84,11 @@ return {
     ),
 
     s(
+        { trig = "agl", dscr = "angle brackets", snippetType = "autosnippet" },
+        fmta("angle.l <> angle.r", { i(1) })
+    ),
+
+    s(
         { trig = "norm", dscr = "Norm", snippetType = "autosnippet" },
         fmta("norm(<>)", { i(1) })
     ),
