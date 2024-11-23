@@ -12,7 +12,7 @@ after-login-command = []
 after-startup-command = [
     # JankyBorders has a built-in detection of already running process,
     # so it won't be run twice on AeroSpace restart
-    'exec-and-forget borders active_color=0xffe2e2e3 inactive_color=0xff494d64 width=6.0 style=round', 
+    'exec-and-forget borders active_color=0xffe2e2e3 inactive_color=0xff494d64 width=6.0', 
     'exec-and-forget sketchybar'
 ]
 
@@ -130,9 +130,8 @@ alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-f = 'workspace F'
 alt-n = 'workspace N'
+alt-q = 'workspace Q'
 alt-w = 'workspace W'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -140,9 +139,8 @@ alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-f = 'move-node-to-workspace F'
 alt-shift-n = 'move-node-to-workspace N'
+alt-shift-q = 'move-node-to-workspace Q'
 alt-shift-w = 'move-node-to-workspace W'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth

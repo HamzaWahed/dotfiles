@@ -90,7 +90,7 @@ sketchybar --default "${default[@]}"
 
 sketchybar --add event aerospace_workspace_change
 
-icons=(      󰍥  󰚗  󱂶  󰂺  󱉟)
+icons=(      󰍥  󰂺  󰚗  󱉟)
 idx=0
 
 for sid in $(aerospace list-workspaces --all); do
