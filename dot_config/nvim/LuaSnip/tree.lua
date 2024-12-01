@@ -36,6 +36,16 @@ return {
     ),
 
     s(
+        { trig = ";c", dscr = "Code", snippetType = "autosnippet" },
+        fmta(
+            [[
+            \code{<>}
+            ]],
+            { i(1) }
+        )
+    ),
+
+    s(
         { trig = "meta", dscr = "Metadata" },
         fmta(
             [[

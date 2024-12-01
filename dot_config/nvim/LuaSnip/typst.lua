@@ -54,8 +54,13 @@ return {
     ),
 
     s(
-        { trig = "itac", dscr = "italic", snippetType = "autosnippet" },
+        { trig = "_", dscr = "italic", snippetType = "autosnippet" },
         fmta("_<>_", { i(1) })
+    ),
+
+    s(
+        { trig = "*", dscr = "bold", snippetType = "autosnippet" },
+        fmta("*<>*", { i(1) })
     ),
 
     s(
@@ -94,11 +99,14 @@ return {
     ),
 
     s(
+        { trig = "|", dscr = "pipe", snippetType = "autosnippet" },
+        fmta("|<>|", { i(1) })
+    ),
+
+    s(
         { trig = "assn", dscr = "Assignment preamble" },
         fmta(
             [[
-#import "@preview/dashy-todo:0.0.1": todo
-
 #let title = [Assignment <>]
 #let author = [Hamza Wahed]
 
