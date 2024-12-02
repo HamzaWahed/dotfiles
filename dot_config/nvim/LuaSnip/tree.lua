@@ -11,8 +11,38 @@ return {
         fmta("#{<> }", { i(1) })
     ),
 
+    s({ trig = "inn", snippetType = "autosnippet" }, {
+        t("\\in "),
+    }),
+
+    s({ trig = "nin", snippetType = "autosnippet" }, {
+        t("\\notin "),
+    }),
+
+    s({ trig = "sect", snippetType = "autosnippet" }, {
+        t("\\cap{} "),
+    }),
+
+    s({ trig = ">=", snippetType = "autosnippet" }, {
+        t("\\geq"),
+    }),
+
+    s({
+        trig = "__",
+        dscr = "Subscript math mode",
+        wordTrig = false,
+        snippetType = "autosnippet",
+    }, fmta("_{ <> }", { i(1) })),
+
+    s({
+        trig = "^^",
+        dscr = "Superscript math mode",
+        wordTrig = false,
+        snippetType = "autosnippet",
+    }, fmta("^{ <> }", { i(1) })),
+
     s(
-        { trig = "par", dscr = "Paragraph block" },
+        { trig = "p", dscr = "Paragraph block" },
         fmta(
             [[
             \p{
@@ -20,6 +50,30 @@ return {
             } <>
             ]],
             { i(1), i(0) }
+        )
+    ),
+
+    s(
+        { trig = "ul", dscr = "unordered list" },
+        fmta(
+            [[
+            \ul{
+              <>
+            }
+            ]],
+            { i(1) }
+        )
+    ),
+
+    s(
+        { trig = "li", dscr = "list item" },
+        fmta(
+            [[
+            \li{
+              <>
+            }
+            ]],
+            { i(1) }
         )
     ),
 
@@ -52,9 +106,6 @@ return {
           \title{<>}
           \taxon{<>}
           \author{hamzawahed}
-
-          \import{base-macros}
-
 
         ]],
             { i(1), i(2) }

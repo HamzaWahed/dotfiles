@@ -13,19 +13,19 @@ return {
 
             vim.keymap.set(
                 "n",
-                "<leader>n.",
+                "<leader>a.",
                 "<cmd>Forester browse<CR>",
                 { silent = true }
             )
             vim.keymap.set(
                 "n",
-                "<leader>nn",
+                "<leader>an",
                 "<cmd>Forester new<CR>",
                 { silent = true }
             )
             vim.keymap.set(
                 "n",
-                "<leader>nr",
+                "<leader>ar",
                 "<cmd>Forester new_random<CR>",
                 { silent = true }
             )

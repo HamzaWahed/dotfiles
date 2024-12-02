@@ -27,9 +27,9 @@ option_as_alt = "Both"
 
 [keyboard]
 bindings = [
-{key = "=", mods="Command", action="IncreaseFontSize"},
-{key = "-", mods="Command", action="DecreaseFontSize"},
-{key = "0", mods="Command", action="ResetFontSize"},
+    { key = "=", mods = "Command", action = "IncreaseFontSize" },
+    { key = "-", mods = "Command", action = "DecreaseFontSize" },
+    { key = "0", mods = "Command", action = "ResetFontSize" },
 ]
 
 [mouse]

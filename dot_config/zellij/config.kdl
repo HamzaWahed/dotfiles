@@ -132,6 +132,7 @@ keybinds clear-defaults=true {
             SwitchToMode "locked"
         }
     }
+
     shared_among "normal" "locked" {
         bind "Super h" { MoveFocusOrTab "left"; }
         bind "Super j" { MoveFocus "down"; }
