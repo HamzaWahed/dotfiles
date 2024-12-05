@@ -146,7 +146,7 @@ alt-shift-semicolon = 'mode service'
 
 # app bindings 
 alt-enter = 'exec-and-forget open -na "Alacritty"'
-alt-b = 'exec-and-forget open -na "firefox"'
+alt-b = 'exec-and-forget open -na "Brave Browser"'
 alt-s = 'exec-and-forget sioyek --new-window --execute-command toggle_horizontal_scroll_lock'
 
 # 'service' binding mode declaration.
