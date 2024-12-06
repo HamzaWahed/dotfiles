@@ -134,10 +134,10 @@ keybinds clear-defaults=true {
     }
 
     shared_among "normal" "locked" {
-        bind "Super h" { MoveFocusOrTab "left"; }
-        bind "Super j" { MoveFocus "down"; }
-        bind "Super k" { MoveFocus "up"; }
-        bind "Super l" { MoveFocusOrTab "right"; }
+        bind "Shift h" { MoveFocusOrTab "left"; }
+        bind "Shift j" { MoveFocus "down"; }
+        bind "Shift k" { MoveFocus "up"; }
+        bind "Shift l" { MoveFocusOrTab "right"; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
@@ -247,7 +247,7 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "kanagawa"
+theme "dracula"
  
 // Choose the base input mode of zellij.
 // Default: normal
