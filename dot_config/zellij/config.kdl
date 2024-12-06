@@ -134,10 +134,10 @@ keybinds clear-defaults=true {
     }
 
     shared_among "normal" "locked" {
-        bind "Shift h" { MoveFocusOrTab "left"; }
-        bind "Shift j" { MoveFocus "down"; }
-        bind "Shift k" { MoveFocus "up"; }
-        bind "Shift l" { MoveFocusOrTab "right"; }
+        bind "Super l" { MoveFocusOrTab "left"; }
+        bind "Super j" { MoveFocus "down"; }
+        bind "Super k" { MoveFocus "up"; }
+        bind "Super ;" { MoveFocusOrTab "right"; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
