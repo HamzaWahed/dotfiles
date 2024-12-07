@@ -21,8 +21,6 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
     end
 end, { silent = true })
 
-vim.keymap.set("n", "<leader>fz", "<cmd>Telescope zoxide<cr>")
-
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit_instance =
     Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
@@ -162,14 +160,14 @@ end
 
 vim.api.nvim_set_keymap(
     "n",
-    "<leader>fm",
+    "<leader>fZ",
     ":lua CreateNote()<CR>",
     { noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
     "n",
-    "<leader>fM",
+    "<leader>fz",
     ":lua CreateJournalNote()<CR>",
     { noremap = true, silent = true }
 )
