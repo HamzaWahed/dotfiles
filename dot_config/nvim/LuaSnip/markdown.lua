@@ -12,8 +12,33 @@ return {
     s({ trig = ";b", snippetType = "autosnippet" }, {
         t("\\beta"),
     }),
+
     s({ trig = ";g", snippetType = "autosnippet" }, {
         t("\\gamma"),
+    }),
+
+    s({ trig = "<=", snippetType = "autosnippet" }, {
+        t("\\leq"),
+    }),
+
+    s({ trig = ">=", snippetType = "autosnippet" }, {
+        t("\\geq"),
+    }),
+
+    s({ trig = "inn", snippetType = "autosnippet" }, {
+        t("\\in"),
+    }),
+
+    s({ trig = "nin", snippetType = "autosnippet" }, {
+        t("\\notin"),
+    }),
+
+    s({ trig = "union", snippetType = "autosnippet" }, {
+        t("\\cup{}"),
+    }),
+
+    s({ trig = "sect", snippetType = "autosnippet" }, {
+        t("\\cap{}"),
     }),
 
     s({ trig = "tt", snippetType = "autosnippet" }, {
@@ -80,10 +105,23 @@ return {
         snippetType = "autosnippet",
     }, fmta("_{<>}", { i(1) })),
 
+    s({
+        trig = "^^",
+        dscr = "Superscript math mode",
+        wordTrig = false,
+        snippetType = "autosnippet",
+    }, fmta("^{<>}", { i(1) })),
+
     s(
         { trig = "mk", dscr = "Inline math mode", snippetType = "autosnippet" },
         fmta("$<>$", { i(1) })
     ),
+
+    s(
+        { trig = "\\{", dscr = "set", snippetType = "autosnippet" },
+        fmta("\\{ <> \\}", { i(1) })
+    ),
+
     s(
         { trig = "dm", dscr = "Display math mode", snippetType = "autosnippet" },
         fmta(
@@ -113,8 +151,8 @@ return {
         fmta("\\ket{<>}", { i(1) })
     ),
 
-    s(
-        { trig = "bra", dscr = "bra vector", snippetType = "autosnippet" },
-        fmta("\\bra{<>}", { i(1) })
-    ),
+    -- s(
+    --     { trig = "bra", dscr = "bra vector", snippetType = "autosnippet" },
+    --     fmta("\\bra{<>}", { i(1) })
+    -- ),
 }
