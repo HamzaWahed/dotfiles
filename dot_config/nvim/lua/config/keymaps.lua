@@ -55,7 +55,7 @@ vim.api.nvim_set_hl(0, "LeapLabel", {
 local hop = require("hop")
 local directions = require("hop.hint").HintDirection
 
-vim.keymap.set("", "<leader>t", function()
+vim.keymap.set("", "x", function()
     hop.hint_words()
 end, { remap = true, silent = true })
 

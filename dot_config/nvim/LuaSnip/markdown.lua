@@ -5,6 +5,11 @@ local i = ls.insert_node
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
 
+local in_mathzone = function()
+    -- The `in_mathzone` function requires the VimTeX plugin
+    return vim.fn["vimtex#syntax#in_mathzone"]() == 1
+end
+
 return {
     s({ trig = ";a", snippetType = "autosnippet" }, {
         t("\\alpha"),
@@ -15,6 +20,10 @@ return {
 
     s({ trig = ";g", snippetType = "autosnippet" }, {
         t("\\gamma"),
+    }),
+
+    s({ trig = ";o", snippetType = "autosnippet" }, {
+        t("\\omega"),
     }),
 
     s({ trig = "<=", snippetType = "autosnippet" }, {
@@ -36,9 +45,23 @@ return {
     s({ trig = "union", snippetType = "autosnippet" }, {
         t("\\cup{}"),
     }),
+    s({ trig = "union", snippetType = "autosnippet" }, {
+        t("\\cup{}"),
+    }),
 
-    s({ trig = "sect", snippetType = "autosnippet" }, {
-        t("\\cap{}"),
+    s({ trig = "sub=", snippetType = "autosnippet" }, {
+        t("\\subseteq"),
+    }),
+    s({ trig = "sup=", snippetType = "autosnippet" }, {
+        t("\\supseteq"),
+    }),
+
+    s({ trig = ";\\", snippetType = "autosnippet" }, {
+        t("\\backslash"),
+    }),
+
+    s({ trig = "dag", wordTrig = false, snippetType = "autosnippet" }, {
+        t("^{\\dagger}"),
     }),
 
     s({ trig = "tt", snippetType = "autosnippet" }, {
@@ -47,12 +70,12 @@ return {
         t("}"),
     }),
 
+    s({ trig = "...", snippetType = "autosnippet" }, {
+        t("\\ldots"),
+    }),
+
     s(
-        {
-            trig = "ff",
-            dscr = "Expands 'ff' into '\frac{}{}'",
-            snippetType = "autosnippet",
-        },
+        { trig = "ff", snippetType = "autosnippet" },
         fmta("\\frac{<>}{<>}", {
             i(1),
             i(2),
@@ -123,6 +146,26 @@ return {
     ),
 
     s(
+        { trig = "l(", dscr = "auto brackets", snippetType = "autosnippet" },
+        fmta("\\left( <> \\right)", { i(1) })
+    ),
+
+    s(
+        { trig = "cal", dscr = "mathcal", snippetType = "autosnippet" },
+        fmta("\\mathcal{<>}", { i(1) })
+    ),
+
+    s(
+        { trig = "Union", dscr = "big union", snippetType = "autosnippet" },
+        fmta("\\bigcup_{<>}", { i(1) })
+    ),
+
+    s(
+        { trig = "bmat", dscr = "block matrix", snippetType = "autosnippet" },
+        fmta("\\begin{bmatrix} <> \\end{bmatrix}", { i(1) })
+    ),
+
+    s(
         { trig = "dm", dscr = "Display math mode", snippetType = "autosnippet" },
         fmta(
             [[
@@ -151,8 +194,9 @@ return {
         fmta("\\ket{<>}", { i(1) })
     ),
 
-    -- s(
-    --     { trig = "bra", dscr = "bra vector", snippetType = "autosnippet" },
-    --     fmta("\\bra{<>}", { i(1) })
-    -- ),
+    s({
+        trig = "bra",
+        condition = is_math,
+        snippetType = "autosnippet",
+    }, fmta("\\bra{<>}", { i(1) })),
 }

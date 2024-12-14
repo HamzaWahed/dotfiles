@@ -13,19 +13,19 @@ return {
 
             vim.keymap.set(
                 "n",
-                "<leader>a.",
+                "<leader>n.",
                 "<cmd>Forester browse<CR>",
                 { silent = true }
             )
             vim.keymap.set(
                 "n",
-                "<leader>an",
+                "<leader>nn",
                 "<cmd>Forester new<CR>",
                 { silent = true }
             )
             vim.keymap.set(
                 "n",
-                "<leader>ar",
+                "<leader>nr",
                 "<cmd>Forester new_random<CR>",
                 { silent = true }
             )
@@ -42,6 +42,13 @@ return {
                 { silent = true }
             )
 
+            local foresterCompletionSource = require("forester.completion")
+
+            require("cmp").register_source("forester", foresterCompletionSource)
+            require("cmp").setup.filetype(
+                "tree",
+                { sources = { { name = "forester", dup = 0 } } }
+            )
             require("forester").setup()
         end,
     },
@@ -71,14 +78,6 @@ return {
 
                 ensure_installed = { "forester" },
             })
-
-            local foresterCompletionSource = require("forester.completion")
-
-            require("cmp").register_source("forester", foresterCompletionSource)
-            require("cmp").setup.filetype(
-                "forester",
-                { sources = { { name = "forester", dup = 0 } } }
-            )
         end,
     },
 }

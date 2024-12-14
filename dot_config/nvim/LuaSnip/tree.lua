@@ -27,6 +27,19 @@ return {
         t("\\geq"),
     }),
 
+    s(
+        { trig = "cal", dscr = "mathcal", snippetType = "autosnippet" },
+        fmta("\\mathcal{<>}", { i(1) })
+    ),
+
+    s(
+        { trig = "ff", snippetType = "autosnippet" },
+        fmta("\\frac{<>}{<>}", {
+            i(1),
+            i(2),
+        })
+    ),
+
     s({
         trig = "__",
         dscr = "Subscript math mode",
@@ -40,6 +53,45 @@ return {
         wordTrig = false,
         snippetType = "autosnippet",
     }, fmta("^{ <> }", { i(1) })),
+
+    s({ trig = "<=", snippetType = "autosnippet" }, {
+        t("\\leq"),
+    }),
+
+    s({ trig = ">=", snippetType = "autosnippet" }, {
+        t("\\geq"),
+    }),
+
+    s(
+        { trig = "\\{", dscr = "set", snippetType = "autosnippet" },
+        fmta("\\{ <> \\}", { i(1) })
+    ),
+
+    s(
+        { trig = "@l", dscr = "link", snippetType = "autosnippet" },
+        fmta("[<>](<>)", { i(1), i(2) })
+    ),
+
+    s(
+        { trig = "@t", dscr = "transclude", snippetType = "autosnippet" },
+        fmta("\\transclude{<>}", { i(1) })
+    ),
+
+    s({ trig = "...", snippetType = "autosnippet" }, {
+        t("\\ldots"),
+    }),
+
+    s(
+        { trig = "align", dscr = "Align* mode", snippetType = "autosnippet" },
+        fmta(
+            [[
+  \begin{align*}
+    <>
+  \end{align*}
+  ]],
+            { i(1) }
+        )
+    ),
 
     s(
         { trig = "p", dscr = "Paragraph block" },
@@ -81,7 +133,7 @@ return {
         { trig = "dm", dscr = "Display math mode", snippetType = "autosnippet" },
         fmta(
             [[
-            #{
+            ##{
               <>
             } <>
             ]],

@@ -1,5 +1,5 @@
 return {
-    "leath-dub/snipe.nvim",
+    "HamzaWahed/snipe.nvim",
     keys = {
         {
             "gb",
@@ -13,5 +13,7 @@ return {
         hints = {
             dictionary = "asdflewcmpghio",
         },
+
+        sort = "default",
     },
 }
