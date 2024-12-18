@@ -42,13 +42,13 @@ return {
                 { silent = true }
             )
 
-            local foresterCompletionSource = require("forester.completion")
+            -- local foresterCompletionSource = require("forester.completion")
 
-            require("cmp").register_source("forester", foresterCompletionSource)
-            require("cmp").setup.filetype(
-                "tree",
-                { sources = { { name = "forester", dup = 0 } } }
-            )
+            -- require("cmp").register_source("forester", foresterCompletionSource)
+            -- require("cmp").setup.filetype(
+            --     "tree",
+            --     { sources = { { name = "forester", dup = 0 } } }
+            -- )
             require("forester").setup()
         end,
     },
