@@ -5,6 +5,15 @@ local i = ls.insert_node
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
 
+local in_mathzone = function()
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    local current_line = vim.api.nvim_buf_get_lines(0, line - 1, line, false)[1]
+    local before_cursor = current_line:sub(1, col)
+    local after_cursor = current_line:sub(col + 1)
+
+    return before_cursor:match("#{") and after_cursor:match("}") ~= nil
+end
+
 return {
     s(
         { trig = "mk", dscr = "Inline math mode", snippetType = "autosnippet" },
@@ -19,9 +28,9 @@ return {
         t("\\notin "),
     }),
 
-    s({ trig = "sect", snippetType = "autosnippet" }, {
+    s({ trig = "and", snippetType = "autosnippet" }, {
         t("\\cap{} "),
-    }),
+    }, { condition = in_mathzone }),
 
     s({ trig = ">=", snippetType = "autosnippet" }, {
         t("\\geq"),
@@ -29,7 +38,8 @@ return {
 
     s(
         { trig = "cal", dscr = "mathcal", snippetType = "autosnippet" },
-        fmta("\\mathcal{<>}", { i(1) })
+        fmta("\\mathcal{<>}", { i(1) }),
+        { condition = in_mathzone }
     ),
 
     s(
@@ -37,7 +47,8 @@ return {
         fmta("\\frac{<>}{<>}", {
             i(1),
             i(2),
-        })
+        }),
+        { condition = in_mathzone }
     ),
 
     s({
@@ -90,7 +101,8 @@ return {
   \end{align*}
   ]],
             { i(1) }
-        )
+        ),
+        { condition = in_mathzone }
     ),
 
     s(
