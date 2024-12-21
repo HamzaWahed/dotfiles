@@ -4,7 +4,7 @@ return {
     config = true,
     keys = {
         {
-            "<leader>tf",
+            "<C-/>",
             "<cmd>ToggleTerm size=40 direction=float<cr>",
             desc = "Open a float terminal at the project directory",
         },

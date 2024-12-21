@@ -35,6 +35,7 @@ return {
 
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
+
         opts = {
             snippets = {
                 expand = function(snippet, _)
@@ -86,6 +87,7 @@ return {
                 preset = "default",
             },
         },
+
         ---@param opts blink.cmp.Config | { sources: { compat: string[] } }
         config = function(_, opts)
             -- setup compat sources
@@ -101,25 +103,6 @@ return {
                     and not vim.tbl_contains(enabled, source)
                 then
                     table.insert(enabled, source)
-                end
-            end
-
-            ---  NOTE: compat with latest version. Currenlty 0.7.6
-            if not vim.g.lazyvim_blink_main then
-                ---@diagnostic disable-next-line: inject-field
-                opts.sources.completion = opts.sources.completion or {}
-                opts.sources.completion.enabled_providers = enabled
-                if
-                    vim.tbl_get(
-                        opts,
-                        "completion",
-                        "menu",
-                        "draw",
-                        "treesitter"
-                    )
-                then
-                    ---@diagnostic disable-next-line: assign-type-mismatch
-                    opts.completion.menu.draw.treesitter = true
                 end
             end
 
