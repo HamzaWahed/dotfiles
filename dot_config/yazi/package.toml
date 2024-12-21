@@ -2,4 +2,4 @@
 deps = [{ use = "dedukun/bookmarks", rev = "600f87c" }, { use = "yazi-rs/plugins:smart-filter", rev = "ad52adf" }, { use = "Lil-Dank/lazygit", rev = "c82794f" }, { use = "Reledia/glow", rev = "f52b382" }, { use = "yazi-rs/plugins:hide-preview", rev = "4adba4e" }]
 
 [flavor]
-deps = [{ use = "Chromium-3-Oxide/everforest-medium", rev = "65bc09b" }, { use = "dangooddd/kanagawa", rev = "b32f205" }, { use = "yazi-rs/flavors:catppuccin-mocha", rev = "8465c93" }, { use = "yazi-rs/flavors:catppuccin-frappe", rev = "4a3082f" }, { use = "PinThePenguine/sunset", rev = "181acd4" }]
+deps = [{ use = "Chromium-3-Oxide/everforest-medium", rev = "65bc09b" }, { use = "dangooddd/kanagawa", rev = "b32f205" }, { use = "yazi-rs/flavors:catppuccin-mocha", rev = "8465c93" }, { use = "yazi-rs/flavors:catppuccin-frappe", rev = "4a3082f" }, { use = "PinThePenguine/sunset", rev = "181acd4" }, { use = "yazi-rs/flavors:catppuccin-macchiato", rev = "8458d25" }]
