@@ -143,7 +143,7 @@ alt-r = 'focus-monitor right'
 alt-shift-semicolon = 'mode service'
 
 # app bindings 
-alt-enter = 'exec-and-forget open -na "WezTerm"'
+alt-enter = 'exec-and-forget open -na "Ghostty"'
 alt-b = 'exec-and-forget open -na "Brave Browser"'
 alt-s = 'exec-and-forget sioyek --new-window --execute-command toggle_horizontal_scroll_lock'
 
