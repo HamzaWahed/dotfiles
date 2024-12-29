@@ -9,7 +9,6 @@
   "conform.nvim": { "branch": "master", "commit": "9180320205d250429f0f80e073326c674e2a7149" },
   "crates.nvim": { "branch": "main", "commit": "8bf8358ee326d5d8c11dcd7ac0bcc9ff97dbc785" },
   "debugprint.nvim": { "branch": "main", "commit": "69c13fc3e6975a4967c870304167b2db0b0cab2a" },
-  "eldritch": { "branch": "master", "commit": "d3df98f58841bdbd88fbe1ca27c9eb76ccca6572" },
   "flash.nvim": { "branch": "main", "commit": "34c7be146a91fec3555c33fe89c7d643f6ef5cf1" },
   "forester.nvim": { "branch": "main", "commit": "86fb835b8c8bb1abfc20c6fc50108ced30b9cfa3" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
