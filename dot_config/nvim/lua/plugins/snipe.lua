@@ -1,5 +1,5 @@
 return {
-    "HamzaWahed/snipe.nvim",
+    "leath-dub/snipe.nvim",
     keys = {
         {
             "gb",

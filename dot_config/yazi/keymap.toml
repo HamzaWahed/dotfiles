@@ -222,12 +222,20 @@ keymap = [
     ], run = "cd ~/.config", desc = "Go to the config directory" },
     { on = [
         "g",
-        "d",
+        "l",
     ], run = "cd ~/Downloads", desc = "Go to the downloads directory" },
+    { on = [
+        "g",
+        "d",
+    ], run = "cd ~/Desktop", desc = "Go to the desktop directory" },
     { on = [
         "g",
         "b",
     ], run = "cd ~/Books", desc = "Go to the books directory" },
+    { on = [
+        "g",
+        "o",
+    ], run = "cd ~/Documents", desc = "Go to the documents directory" },
     { on = [
         "g",
         "<Space>",
