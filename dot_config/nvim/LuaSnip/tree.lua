@@ -106,7 +106,7 @@ return {
     ),
 
     s(
-        { trig = "p", dscr = "Paragraph block" },
+        { trig = "p", priority = 1000, dscr = "Paragraph block" },
         fmta(
             [[
             \p{
