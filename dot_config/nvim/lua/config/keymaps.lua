@@ -29,12 +29,11 @@ function lazygit()
     lazygit_instance:toggle()
 end
 
-vim.api.nvim_set_keymap(
-    "n",
-    "<leader>gg",
-    "<cmd>lua lazygit()<CR>",
-    { noremap = true, silent = true }
-)
+local neogit = require("neogit")
+
+vim.keymap.set("n", "<leader>gg", function()
+    neogit.open({ kind = "split_below" })
+end, { noremap = true, silent = true })
 
 local hop = require("hop")
 local directions = require("hop.hint").HintDirection
@@ -42,31 +41,3 @@ local directions = require("hop.hint").HintDirection
 vim.keymap.set("", "x", function()
     hop.hint_words()
 end, { remap = true, silent = true })
-
-vim.api.nvim_set_keymap(
-    "n",
-    "<leader>gC",
-    "<cmd>Neogit commit<CR>",
-    { noremap = true, silent = true }
-)
-
-vim.api.nvim_set_keymap(
-    "n",
-    "<leader>gk",
-    "<cmd>Neogit push<CR>",
-    { noremap = true, silent = true }
-)
-
-vim.api.nvim_set_keymap(
-    "n",
-    "<leader>gK",
-    "<cmd>Neogit pull<CR>",
-    { noremap = true, silent = true }
-)
-
-vim.keymap.set(
-    "n",
-    "<leader>k",
-    '<cmd>lua require("kubectl").toggle()<cr>',
-    { noremap = true, silent = true }
-)
