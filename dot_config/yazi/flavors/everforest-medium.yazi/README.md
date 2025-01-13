@@ -3,7 +3,7 @@
 </div>
 
 <h3 align="center">
-    Kanagawa Flavor for <a href="https://github.com/sxyazi/yazi">Yazi</a>
+	Example Flavor for <a href="https://github.com/sxyazi/yazi">Yazi</a>
 </h3>
 
 ## 👀 Preview
@@ -13,16 +13,16 @@
 ## 🎨 Installation
 
 ```bash
-ya pack -a dangooddd/kanagawa
+ya pack -a Chromium-3-Oxide/everforest-medium
 ```
 
 ## ⚙️ Usage
 
-Add these lines to your `theme.toml` configuration file to use it:
+Add the these lines to your `theme.toml` configuration file to use it:
 
 ```toml
 [flavor]
-dark = "kanagawa"
+use = "everforest-medium"
 ```
 
 ## 📜 License
