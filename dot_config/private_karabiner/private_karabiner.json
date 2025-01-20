@@ -82,6 +82,19 @@
                         ]
                     },
                     {
+                        "description": "Focus Sioyek with Alt+S",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "mandatory": ["option"] }
+                                },
+                                "to": [{ "shell_command": "osascript -e 'tell application \"Sioyek\" to activate'" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Mac OSX: disable cmd + option + h + m to prevent minimising all windows",
                         "manipulators": [
                             {
