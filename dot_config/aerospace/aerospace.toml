@@ -81,7 +81,7 @@ outer.right = 0
 [mode.main.binding]
 
 cmd-h = []
-cmd-m = []
+cmd-m = 'mode windows'
 cmd-alt-h = []
 
 # All possible keys:
@@ -166,3 +166,16 @@ h = ['join-with left', 'mode main']
 j = ['join-with down', 'mode main']
 k = ['join-with up', 'mode main']
 l = ['join-with right', 'mode main']
+
+[mode.windows.binding]
+esc = 'mode main'
+1 = ['focus --dfs-index 0', 'mode main']
+2 = ['focus --dfs-index 1', 'mode main']
+3 = ['focus --dfs-index 2', 'mode main']
+4 = ['focus --dfs-index 3', 'mode main']
+5 = ['focus --dfs-index 4', 'mode main']
+6 = ['focus --dfs-index 5', 'mode main']
+7 = ['focus --dfs-index 6', 'mode main']
+8 = ['focus --dfs-index 7', 'mode main']
+9 = ['focus --dfs-index 8', 'mode main']
+0 = ['focus --dfs-index 9', 'mode main']
