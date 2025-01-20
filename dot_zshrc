@@ -66,12 +66,13 @@ ZSH_THEME="afowler"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-vi-mode brew kubectl-autocomplete zsh-autosuggestions taskwarrior zsh-syntax-highlighting)
+plugins=(git brew kubectl-autocomplete zsh-autosuggestions taskwarrior zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,7 +96,6 @@ source $ZSH/oh-my-zsh.sh
 autoload -Uz compinit
 compinit
 
-bindkey '^Y' autosuggest-accept
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -119,6 +119,8 @@ alias tod="task due:today list"
 alias tmr="task due:tomorrow list"
 alias c="clear"
 alias x="exit"
+alias lg="lazygit"
+alias dk="lazydocker"
 
 [ -f "/Users/ismailhamza/.ghcup/env" ] && . "/Users/ismailhamza/.ghcup/env" # ghcup-env
 
@@ -164,9 +166,6 @@ alias ldw='last-download'
 alias ldm='last-download-move'
 alias cd="z"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # yazi
 function r() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -177,9 +176,13 @@ function r() {
 	rm -f -- "$tmp"
 }
 
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/the-unnamed.omp.json)"
 source <(fzf --zsh)
 eval $(opam env)
 
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/the-unnamed.omp.json)"
+
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+bindkey -v
+bindkey '^Y' autosuggest-accept
