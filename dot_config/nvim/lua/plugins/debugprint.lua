@@ -1,5 +1,6 @@
 return {
     "andrewferrier/debugprint.nvim",
+    vscode = false,
 
     opts = {
         keymaps = {
