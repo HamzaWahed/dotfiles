@@ -24,19 +24,27 @@ keymap("n", "x", function()
     require("hop").hint_words()
 end, opts)
 
--- project manager keymaps
+-- vscode keymaps
 keymap(
     { "n", "v" },
     "<leader>pa",
     "<cmd>lua require('vscode').action('projectManager.saveProject')<CR>"
 )
+
 keymap(
     { "n", "v" },
     "<leader>po",
-    "<cmd>lua require('vscode').action('projectManager.listProjectsNewWindow')<CR>"
+    "<cmd>lua require('vscode').action('projectManager.listProjects')<CR>"
 )
+
 keymap(
     { "n", "v" },
     "<leader>pe",
     "<cmd>lua require('vscode').action('projectManager.editProjects')<CR>"
+)
+
+keymap(
+    { "n", "v" },
+    "<leader>e",
+    "<cmd>lua require('vscode').action('workbench.view.explorer')<CR>"
 )

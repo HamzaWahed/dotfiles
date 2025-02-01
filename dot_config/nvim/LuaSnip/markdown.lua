@@ -5,11 +5,6 @@ local i = ls.insert_node
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
 
-local in_mathzone = function()
-    -- The `in_mathzone` function requires the VimTeX plugin
-    return vim.fn["vimtex#syntax#in_mathzone"]() == 1
-end
-
 return {
     s({ trig = ";a", snippetType = "autosnippet" }, {
         t("\\alpha"),
@@ -196,7 +191,6 @@ return {
 
     s({
         trig = "bra",
-        condition = is_math,
         snippetType = "autosnippet",
     }, fmta("\\bra{<>}", { i(1) })),
 }

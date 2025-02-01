@@ -4,19 +4,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Focus Anki with Alt+A",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": ["option"] }
-                                },
-                                "to": [{ "shell_command": "osascript -e 'tell application \"Anki\" to activate'" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Option-Tab functions the same as Cmd-Tab",
                         "manipulators": [
                             {
@@ -51,11 +38,11 @@
                         ]
                     },
                     {
-                        "description": "Focus Zen Browser with Alt+B",
+                        "description": "Focus Zen Browser with Alt+2",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "b",
+                                    "key_code": "2",
                                     "modifiers": { "mandatory": ["option"] }
                                 },
                                 "to": [{ "shell_command": "osascript -e 'tell application \"Zen Browser\" to activate'" }],
@@ -64,11 +51,11 @@
                         ]
                     },
                     {
-                        "description": "Focus Godot with Alt-G",
+                        "description": "Focus Godot with Alt-3",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "g",
+                                    "key_code": "3",
                                     "modifiers": { "mandatory": ["option"] }
                                 },
                                 "to": [{ "shell_command": "osascript -e 'tell application \"Godot_mono\" to activate'" }],

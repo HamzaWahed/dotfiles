@@ -38,11 +38,11 @@
                         ]
                     },
                     {
-                        "description": "Focus Ghostty with Alt+1",
+                        "description": "Focus Ghostty with Alt+T",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "1",
+                                    "key_code": "t",
                                     "modifiers": { "mandatory": ["option"] }
                                 },
                                 "to": [{ "shell_command": "osascript -e 'tell application \"Ghostty\" to activate'" }],
