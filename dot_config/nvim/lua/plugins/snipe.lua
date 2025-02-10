@@ -1,6 +1,5 @@
 return {
     "leath-dub/snipe.nvim",
-    vscode = true,
     keys = {
         {
             "gb",
