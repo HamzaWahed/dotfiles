@@ -17,6 +17,12 @@ shift + alt - x : yabai -m space --mirror x-axis
 # toggle window float
 shift + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
+# fullscreen
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+
+# balance out the windows
+shift + alt - e : yabai -m space --balance
+
 # swap windows
 shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
@@ -52,3 +58,5 @@ alt - 6 : yabai -m space --focus 6
 # Create and Destroy spaces
 shift + alt - d : yabai -m space --destroy
 shift + alt - n : yabai -m space --create
+
+

@@ -17,5 +17,3 @@ yabai -m config window_gap 8
 
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^System Settings" manage=off
-
-yabai -m config mouse_follows_focus on
