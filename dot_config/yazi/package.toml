@@ -1,12 +1,24 @@
-[plugin]
-deps = [
-    { use = "dedukun/bookmarks", rev = "202e450" },
-    { use = "yazi-rs/plugins:smart-filter", rev = "600614a" },
-    { use = "yazi-rs/plugins:hide-preview", rev = "600614a" },
-]
+[[plugin.deps]]
+use = "dedukun/bookmarks"
+rev = "202e450"
+hash = "9e2f6f7381542d3adb3080b394b431b4"
 
-[flavor]
-deps = [
-    { use = "yazi-rs/flavors:catppuccin-mocha", rev = "fc8eeaa" },
-    { use = "yazi-rs/flavors:catppuccin-macchiato", rev = "fc8eeaa" },
-]
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-filter"
+rev = "600614a"
+hash = "ea24edab4a62c94dbd205adfb6f2c08d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:hide-preview"
+rev = "600614a"
+hash = "5be5885898ca9df783bdec0d402bf4b0"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "fc8eeaa"
+hash = "407710c2af9621a8351453e637d6c870"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-macchiato"
+rev = "fc8eeaa"
+hash = "53395641947758002401a7c6ea0f184"
