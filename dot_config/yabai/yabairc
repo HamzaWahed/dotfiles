@@ -9,7 +9,7 @@ yabai -m active_window_opacity 1.0
 yabai -m normal_window_opacity 0.90
 
 # padding
-yabai -m config top_padding 5
+yabai -m config top_padding 0
 yabai -m config bottom_padding 8
 yabai -m config left_padding 8
 yabai -m config right_padding 8
