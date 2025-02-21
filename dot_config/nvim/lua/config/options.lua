@@ -14,6 +14,8 @@ vim.g.mkdp_combine_preview_auto_refresh = 1
 vim.g.mkdp_browser = "Zen Browser"
 vim.g.snacks_animate = false
 vim.g.snacks_indent = false
+vim.opt.cmdheight = 0
+vim.diagnostic.enable(false)
 
 -- hides tab indicators
 vim.opt.list = false
