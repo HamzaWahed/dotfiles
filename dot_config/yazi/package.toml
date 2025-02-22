@@ -1,24 +1,24 @@
 [[plugin.deps]]
 use = "dedukun/bookmarks"
-rev = "202e450"
-hash = "9e2f6f7381542d3adb3080b394b431b4"
+rev = "fe0b1de"
+hash = "221ed40593a5cb5bd80f963f05c556f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "600614a"
-hash = "ea24edab4a62c94dbd205adfb6f2c08d"
+rev = "5186af7"
+hash = "b482f4f2d3c4e0aa3f8db89a95699439"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:hide-preview"
-rev = "600614a"
-hash = "5be5885898ca9df783bdec0d402bf4b0"
+rev = "5186af7"
+hash = "1e31898370b752e4faf335b762b3eeaf"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "fc8eeaa"
-hash = "407710c2af9621a8351453e637d6c870"
+rev = "1a419b2"
+hash = "c40e434318a8ceffd01842f8dfb2390e"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-macchiato"
-rev = "fc8eeaa"
-hash = "53395641947758002401a7c6ea0f184"
+rev = "1a419b2"
+hash = "c34feed32d555e79ab9a0c0a7bdda2be"
