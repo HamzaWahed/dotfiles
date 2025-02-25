@@ -146,11 +146,6 @@ return {
     ),
 
     s(
-        { trig = "cal", dscr = "mathcal", snippetType = "autosnippet" },
-        fmta("\\mathcal{<>}", { i(1) })
-    ),
-
-    s(
         { trig = "Union", dscr = "big union", snippetType = "autosnippet" },
         fmta("\\bigcup_{<>}", { i(1) })
     ),
