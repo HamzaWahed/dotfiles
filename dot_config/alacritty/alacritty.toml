@@ -22,7 +22,6 @@ style = "Medium"
 
 [window]
 decorations = "None"
-# opacity = 0.8
 option_as_alt = "Both"
 
 [keyboard]
@@ -34,3 +33,6 @@ bindings = [
 
 [mouse]
 hide_when_typing = true
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
