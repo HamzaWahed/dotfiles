@@ -69,3 +69,7 @@ alt - b : osascript -e 'tell application "Zen Browser" to activate'
 alt - s : osascript -e 'tell application "Sioyek" to activate'
 alt - r : osascript -e 'tell application "Books" to activate'
 alt - return : osascript -e 'tell application "Ghostty" to activate'
+
+# remove hotkeys for hiding
+cmd - h : true
+cmd - m : true
