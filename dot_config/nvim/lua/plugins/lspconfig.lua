@@ -4,5 +4,9 @@ return {
         opts.inlay_hints = {
             enabled = false,
         }
+
+        opts.servers.clangd = {
+            filetypes = { "c", "cpp", "objc", "objcpp" },
+        }
     end,
 }
